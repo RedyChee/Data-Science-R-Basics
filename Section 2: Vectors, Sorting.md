@@ -60,16 +60,16 @@ codes[c("egypt","italy")]
 - True becomes False and vice versa
 
 -----
-example
-# Create the ind vector
+# example
+## Create the ind vector
 library(dslabs)
 data(na_example)
 ind <- is.na(na_example)
 
-# We saw that this gives an NA
+## We saw that this gives an NA
 mean(na_example)
 
-# Compute the average, for entries of na_example that are not NA 
+## Compute the average, for entries of na_example that are not NA 
 mean(na_example[!ind])
 -----
 
@@ -108,17 +108,17 @@ rank(x)
 ```
 
 -----
-#example
-# Define a variable states to be the state names from the murders data frame
+# example
+## Define a variable states to be the state names from the murders data frame
 states <- murders$state
 
-# Define a variable ranks to determine the population size ranks 
+## Define a variable ranks to determine the population size ranks 
 ranks <- rank(murders$population)
 
-# Define a variable ind to store the indexes needed to order the population values
+## Define a variable ind to store the indexes needed to order the population values
 ind <- order(ranks)
 
-# Create a data frame my_df with the state name and its rank and ordered from least populous to most 
+## Create a data frame my_df with the state name and its rank and ordered from least populous to most 
 my_df <- data.frame(states = states[ind], ranks = ranks[ind])
 my_df
 -----

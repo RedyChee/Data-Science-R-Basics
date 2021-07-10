@@ -124,7 +124,13 @@ my_df
 -----
 
 # 2.3 Vector Arithmetics
-
+- In R, arithmetic operations on vectors occur element-wise.
+- The name of the state with the maximum population is found by doing the following
+` murders$state[which.max(murders$population)] `
+- to obtain the murder rate
+` murder_rate <- murders$total / murders$population * 100000 `
+- ordering the states by murder rate, in decreasing order
+` murders$state[order(murder_rate, decreasing=TRUE)] `
 
 
 

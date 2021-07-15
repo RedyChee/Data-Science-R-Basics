@@ -22,7 +22,7 @@ data(dataset_name)
 
 ## Save a script: 
 - Ctrl+S
-
+f
 ## Run an entire script:  
 - Ctrl+Shift+Enter, or click "Source" on the editor pane
 

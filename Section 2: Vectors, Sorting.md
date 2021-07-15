@@ -104,7 +104,8 @@ murders$state[i_max]    # state name with highest number of total murders
 ```
 x <- c(31, 4, 15, 92, 65)
 x
-rank(x)  
+rank(x)  #lowest to highest
+rank(-x) #higest to lowest
 ```
 
 -----

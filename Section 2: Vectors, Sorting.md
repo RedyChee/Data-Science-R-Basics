@@ -6,26 +6,25 @@ codes <- c(380, 124, 818)
 country <- c("italy", "canada", "egypt")
 ```
 
-## name the elements of a numeric vector
-## Note that the two lines of code below have the same result
+## Name the elements of a numeric vector
+- note that the two lines of code below have the same result
 ```
 codes <- c(italy = 380, canada = 124, egypt = 818)
 codes <- c("italy" = 380, "canada" = 124, "egypt" = 818)
 ```
 
-## name the elements of a numeric vector using the names() function
+## Name the elements of a numeric vector using the names() function
 ```
 codes <- c(380, 124, 818)
 country <- c("italy","canada","egypt")
 names(codes) <- country
 ```
 ## Subsetting
-## Using square brackets to access specific elements of a vector
+- using square brackets to access specific elements of a vector
 ` codes[2] `      => 2nd element
 ` codes[c(1,3)] ` => 1st and 3rd element
 ` codes[1:2] `    => 1st and 2nd element
-
-## If the entries of a vector are named, they may be accessed by referring to their name
+- if the entries of a vector are named, they may be accessed by referring to their name
 ```
 codes["canada"]
 codes[c("egypt","italy")]
@@ -35,16 +34,16 @@ codes[c("egypt","italy")]
 ` x <- c(1, "canada", 3) `
 - R coerced the data into characters
 
-## turn numbers into characters
+## Turn numbers into characters
 ` as.character() `
 
-## turn characters into numbers
+## Turn characters into numbers
 ` as.numeric() `
 
-## return length of character vector
+## Return length of character vector
 ` nchar(x) `
 
-## missing data
+## Missing data
 - missing data is assigned the value NA
 ```
 > x <- c("1", "b", "3")
@@ -56,14 +55,13 @@ codes[c("egypt","italy")]
 - returns a logical vector that tells us which entries are NA
 ` is.na(na_example) `
 
-## return number of NA
+## Return number of NA
 ` sum(x) `
 
 ## ! operator
 - True becomes False and vice versa
-
------
-# example
+- example:
+```
 ## Create the ind vector
 library(dslabs)
 data(na_example)
@@ -74,45 +72,44 @@ mean(na_example)
 
 ## Compute the average, for entries of na_example that are not NA 
 mean(na_example[!ind])
------
+```
 
 # 2.2 Sorting
 
-## sort a vector in increasing order
+## Sort a vector in increasing order
 ```
 x <- c(31, 4, 15, 92, 65)
 x
 sort(x)
 ```
 
-## produces the indices to obtain the sorted vector
+## Produces the indices to obtain the sorted vector
 ```
 index <- order(x)
 x[index]    # rearranging by this index puts elements in order
 order(x)
 ```
 
-## returns the largest/smallest value
+## Returns the largest/smallest value
 ` max(murders$total) ` 
 ` min(murders$total) ` 
 
-## returns the index of the largest/smallest value
+## Returns the index of the largest/smallest value
 ```
 i_max <- which.max(murders$total)
 i_min <- which.min(murders$total)
 murders$state[i_max]    # state name with highest number of total murders
 ```
 
-## provide the ranks of the items in the original vector.
+## Provide the ranks of the items in the original vector.
 ```
 x <- c(31, 4, 15, 92, 65)
 x
 rank(x)  #lowest to highest
 rank(-x) #higest to lowest
 ```
-
------
-# example
+- example:
+```
 ## Define a variable states to be the state names from the murders data frame
 states <- murders$state
 
@@ -125,7 +122,7 @@ ind <- order(ranks)
 ## Create a data frame my_df with the state name and its rank and ordered from least populous to most 
 my_df <- data.frame(states = states[ind], ranks = ranks[ind])
 my_df
------
+```
 
 # 2.3 Vector Arithmetics
 - In R, arithmetic operations on vectors occur element-wise.

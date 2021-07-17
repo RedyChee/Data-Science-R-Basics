@@ -41,6 +41,9 @@ codes[c("egypt","italy")]
 ## turn characters into numbers
 ` as.numeric() `
 
+## return length of character vector
+` nchar(x) `
+
 ## missing data
 - missing data is assigned the value NA
 ```

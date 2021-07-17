@@ -33,6 +33,9 @@ result <- ifelse(a > 0, 1/a, NA)
 data(na_example)
 no_nas <- ifelse(is.na(na_example), 0, na_example) 
 sum(is.na(no_nas))
+
+# Assign the state abbreviation when the state name is longer than 8 characters 
+new_names <- ifelse(nchar(murders$state) > 8, murders$abb, murders$state)
 ```
 
 ## any()

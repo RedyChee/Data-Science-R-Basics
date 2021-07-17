@@ -53,7 +53,7 @@ any(z)
 - functions are objects
 - must be assigned a variable name with arrow operator
 
-## the general form of a function
+## General form of a function
 ```
 my_function <- function(VARIABLE_NAME){
   perform operations on VARIABLE_NAME and calculate VALUE
@@ -61,7 +61,7 @@ my_function <- function(VARIABLE_NAME){
 }
 ```
 
-## example of defining a function to compute the average of a vector x
+## Example of defining a function to compute the average of a vector x
 ```
 avg <- function(x){
   s <- sum(x)
@@ -70,13 +70,13 @@ avg <- function(x){
 }
 ```
 
-## we see that the above function and the pre-built R mean() function are identical
+## We see that the above function and the pre-built R mean() function are identical
 ```
 x <- 1:100
 identical(mean(x), avg(x))
 ```
 
-## variables inside a function 
+## Variables inside a function 
 - not defined in the workspace
 ```
 s <- 3
@@ -84,7 +84,7 @@ avg(1:10)
 s
 ```
 
-## functions can have multiple arguments as well as default values
+## Functions can have multiple arguments as well as default values
 ```
 avg <- function(x, arithmetic = TRUE){
   n <- length(x)
@@ -102,7 +102,7 @@ for(i in some_range){
 ```
 - At the end of the loop, the value of i is the last value of the range
 
-## creating a function that computes the sum of integers 1 through n
+## Creating a function that computes the sum of integers 1 through n
 ```
 compute_s_n <- function(n){
   x <- 1:n
@@ -110,14 +110,14 @@ compute_s_n <- function(n){
 }
 ```
 
-## a very simple for-loop
+## A very simple for-loop
 ```
 for(i in 1:5){
   print(i)
 }
 ```
 
-## a for-loop for our summation
+## A for-loop for our summation
 ```
 m <- 25
 s_n <- vector(length = m) # create an empty vector
@@ -126,16 +126,16 @@ for(n in 1:m){
 }
 ```
 
-## creating a plot for our summation function
+## Creating a plot for our summation function
 ```
 n <- 1:m
 plot(n, s_n)
 ```
 
-## a table of values comparing our function to the summation formula
+## A table of values comparing our function to the summation formula
 ` head(data.frame(s_n = s_n, formula = n*(n+1)/2)) `
 
-## overlaying our function with the summation formula
+## Overlaying our function with the summation formula
 ```
 plot(n, s_n)
 lines(n, n*(n+1)/2)
@@ -152,13 +152,6 @@ lines(n, n*(n+1)/2)
 - reduce
 - identical
 - unique
-
-
-
-
-
-
-
 
 
 

@@ -8,7 +8,7 @@
 ` index <- murder_rate <= 0.71 `
 
 ## Determining which states have murder rates less than or equal to 0.71
-` murders$state[inde x] `
+` murders$state[index] `
 
 ## Calculating how many states have a murder rate less than or equal to 0.71
 ` sum(index) `
